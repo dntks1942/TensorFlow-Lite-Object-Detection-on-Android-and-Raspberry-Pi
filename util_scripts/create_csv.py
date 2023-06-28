@@ -66,10 +66,11 @@ def json_to_csv(path):
     return json_df
 
 def main():
-    json_path = os.path.join(os.getcwd(), 'label.json')
-    csv_df = json_to_csv(json_path)
-    csv_df.to_csv('labels.csv', index=None)
-    print('Successfully converted JSON to CSV.')
+    for folder in ['train', 'validation']:
+        image_path = os.path.join(os.getcwd(), ('images/' + folder))
+        csv_df = json_to_csv(image_path)
+        csv_df.to_csv('images/' + folder + '_labels.csv', index=None)
+        print('Successfully converted JSON to CSV.')
 
 if __name__ == '__main__':
     main()
