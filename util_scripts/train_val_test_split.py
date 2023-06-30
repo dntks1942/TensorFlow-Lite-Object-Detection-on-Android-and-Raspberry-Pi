@@ -11,11 +11,12 @@ from pathlib import Path
 import random
 import os
 
+root_path = os.environ.get('ROOT_Path')
 # Define paths to image folders
-image_path = '/content/images/all'
-train_path = '/content/images/train'
-val_path = '/content/images/validation'
-test_path = '/content/images/test'
+image_path = root_path + '/images/all'
+train_path = root_path + '/images/train'
+val_path = root_path + '/images/validation'
+test_path = root_path + '/images/test'
 
 # Get list of all images
 jpg_file_list = [path for path in Path(image_path).rglob('*.jpg')]
