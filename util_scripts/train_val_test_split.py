@@ -23,8 +23,9 @@ jpg_file_list = [path for path in Path(image_path).rglob('*.jpg')]
 JPG_file_list = [path for path in Path(image_path).rglob('*.JPG')]
 png_file_list = [path for path in Path(image_path).rglob('*.png')]
 bmp_file_list = [path for path in Path(image_path).rglob('*.bmp')]
+jpeg_file_list = [path for path in Path(image_path).rglob('*.jpeg')]
 
-file_list = jpg_file_list + JPG_file_list + png_file_list + bmp_file_list
+file_list = jpg_file_list + JPG_file_list + png_file_list + bmp_file_list + jpeg_file_list
 file_num = len(file_list)
 print('Total images: %d' % file_num)
 
